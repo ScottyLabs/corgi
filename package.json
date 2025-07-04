@@ -54,10 +54,14 @@
         "glob": "^11.0.3",
         "husky": "^9.1.7",
         "lint-staged": "^16.1.2",
+        "madr": "^4.0.0",
         "storybook": "^9.0.15",
         "typescript": "~5.8.3",
         "unplugin-dts": "^1.0.0-beta.2",
         "vite": "npm:rolldown-vite@latest",
         "vite-plugin-lib-inject-css": "^2.2.2"
+    },
+    "dependencies": {
+        "@base-ui-components/react": "^1.0.0-beta.1"
     }
 }
