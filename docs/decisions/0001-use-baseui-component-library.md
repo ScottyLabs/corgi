@@ -22,9 +22,9 @@ We chose "Base UI" for the following reasons:
 * Radix UI has also shown a slowed development cycle, and many of the developers have migrated to Base UI.
 * AriaKit has poor documentation in comparison to Base UI and is less popular.
 * Material UI enforces Google's Material Design system, which is not what we are looking for.
-* Chakra UI and Mantine also enforce their own design systems, and are not unstyled component systems.
+* Chakra UI and Mantine also enforce their own design systems, and are not unstyled component libraries.
 * Base UI is being actively developed by the creators of Radix, Floating UI, and Material UI. It has strong documentation that is similar in style to the most popular option, shadcn/ui, and also aims to have a similar API.
 
 ### Consequences
 
-* Components from this library shall be distributed in an NPM package, similarly to how Base UI distributes its components, rather than as copy-paste chunks of code like shadcn/ui does.
+* Components from this library shall be distributed in an NPM package, similarly to how Base UI distributes its components, rather than as copy-pastable chunks of code like shadcn/ui does.
