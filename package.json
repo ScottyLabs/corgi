@@ -62,6 +62,7 @@
         "vite-plugin-lib-inject-css": "^2.2.2"
     },
     "dependencies": {
-        "@base-ui-components/react": "^1.0.0-beta.1"
+        "@base-ui-components/react": "^1.0.0-beta.1",
+        "cva": "^1.0.0-beta.4"
     }
 }

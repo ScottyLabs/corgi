@@ -1,41 +1,31 @@
+import { cva, type VariantProps } from "cva";
 import styles from "./styles.module.css";
 
-export interface ButtonProps {
-    /** Is this the principal call to action on the page? */
-    primary?: boolean;
-    /** What background color to use */
-    backgroundColor?: string;
-    /** How large should the button be? */
-    size?: "small" | "medium" | "large";
-    /** Button contents */
-    label: string;
-    /** Optional click handler */
-    onClick?: () => void;
-}
+const button = cva({
+    base: styles.base,
+    variants: {
+        disabled: {},
+        size: {},
+        mode: {},
+        category: {},
+    },
+});
 
-/** Primary UI component for user interaction */
-export const Button = ({
-    primary = false,
-    size = "medium",
-    backgroundColor,
-    label,
+export interface ButtonProps
+    extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "disabled">,
+        VariantProps<typeof button> {}
+
+export const Button: React.FC<ButtonProps> = ({
+    className,
+    size,
+    mode,
+    category,
+    disabled,
     ...props
-}: ButtonProps) => {
-    const mode = primary
-        ? "storybook-button--primary"
-        : "storybook-button--secondary";
-    return (
-        <button
-            type="button"
-            className={[
-                styles["storybook-button"],
-                styles[`storybook-button--${size}`],
-                styles[mode],
-            ].join(" ")}
-            style={{ backgroundColor }}
-            {...props}
-        >
-            {label}
-        </button>
-    );
-};
+}) => (
+    <button
+        className={button({ className, disabled, size, mode, category })}
+        disabled={disabled}
+        {...props}
+    />
+);
