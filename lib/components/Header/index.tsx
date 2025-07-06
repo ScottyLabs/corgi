@@ -1,4 +1,3 @@
-import { Button } from "../Button";
 import styles from "./styles.module.css";
 
 type User = {
@@ -47,27 +46,10 @@ export const Header = ({
                 <h1>Acme</h1>
             </div>
             <div>
-                {user ? (
-                    <>
-                        <span className={styles.welcome}>
-                            Welcome, <b>{user.name}</b>!
-                        </span>
-                        <Button
-                            size="small"
-                            onClick={onLogout}
-                            label="Log out"
-                        />
-                    </>
-                ) : (
-                    <>
-                        <Button size="small" onClick={onLogin} label="Log in" />
-                        <Button
-                            primary
-                            size="small"
-                            onClick={onCreateAccount}
-                            label="Sign up"
-                        />
-                    </>
+                {user && (
+                    <span className={styles.welcome}>
+                        Welcome, <b>{user.name}</b>!
+                    </span>
                 )}
             </div>
         </div>
