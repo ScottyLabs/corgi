@@ -11,12 +11,7 @@ export interface HeaderProps {
     onCreateAccount?: () => void;
 }
 
-export const Header = ({
-    user,
-    onLogin,
-    onLogout,
-    onCreateAccount,
-}: HeaderProps) => (
+export const Header = ({ user }: HeaderProps) => (
     <header>
         <div className={styles["storybook-header"]}>
             <div>
