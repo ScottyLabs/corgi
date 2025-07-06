@@ -1,4 +1,6 @@
-# Component Library
+# Corgi
+
+This is the repository for ScottyLabs' React component library, built on top of [Base UI](https://base-ui.com/).
 
 ## Development
 
