@@ -1,5 +1,6 @@
 import { dirname, extname, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-oxc";
 import { glob } from "glob";
 import dts from "unplugin-dts/vite";
@@ -12,6 +13,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
     plugins: [
         react(),
+        tailwindcss(),
         libInjectCss(),
         dts({
             include: ["lib"],

@@ -1,8 +1,6 @@
 import { cva, type VariantProps } from "cva";
-import styles from "./styles.module.css";
 
 const button = cva({
-    base: styles.base,
     variants: {
         disabled: {},
         size: {},
