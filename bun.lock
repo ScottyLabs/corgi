@@ -16,7 +16,6 @@
         "@commitlint/config-conventional": "^19.8.1",
         "@microsoft/api-extractor": "^7.52.8",
         "@storybook/addon-docs": "^9.0.15",
-        "@storybook/addon-onboarding": "^9.0.15",
         "@storybook/react-vite": "^9.0.15",
         "@types/bun": "^1.2.18",
         "@types/react": "^19.1.8",
@@ -307,8 +306,6 @@
     "@rushstack/ts-command-line": ["@rushstack/ts-command-line@5.0.1", "", { "dependencies": { "@rushstack/terminal": "0.15.3", "@types/argparse": "1.0.38", "argparse": "~1.0.9", "string-argv": "~0.3.1" } }, "sha512-bsbUucn41UXrQK7wgM8CNM/jagBytEyJqXw/umtI8d68vFm1Jwxh1OtLrlW7uGZgjCWiiPH6ooUNa1aVsuVr3Q=="],
 
     "@storybook/addon-docs": ["@storybook/addon-docs@9.0.15", "", { "dependencies": { "@mdx-js/react": "^3.0.0", "@storybook/csf-plugin": "9.0.15", "@storybook/icons": "^1.2.12", "@storybook/react-dom-shim": "9.0.15", "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0", "ts-dedent": "^2.0.0" }, "peerDependencies": { "storybook": "^9.0.15" } }, "sha512-HOb45DkF23T1tRzakb9q33qnBRso15S/GM28ippPZWi5ZXR9RAyKVgOSMA/ViEpK4ezASxN+Tee+H7m4ksEFZw=="],
-
-    "@storybook/addon-onboarding": ["@storybook/addon-onboarding@9.0.15", "", { "peerDependencies": { "storybook": "^9.0.15" } }, "sha512-g2FqO0aS6vvjMZdY+0xjV1C7YGcDE0GkuPAv1JqejNYGyX2Z8nuLHy2zqhLIBpfoap4S9PZO+obqEKVeo70Q0Q=="],
 
     "@storybook/builder-vite": ["@storybook/builder-vite@9.0.15", "", { "dependencies": { "@storybook/csf-plugin": "9.0.15", "ts-dedent": "^2.0.0" }, "peerDependencies": { "storybook": "^9.0.15", "vite": "^5.0.0 || ^6.0.0 || ^7.0.0" } }, "sha512-ogPec1V+e3MgTY5DBlq/6hBBui0Y4TmolYQh0eL3cATHrwZlwkTTDWQfsOnMALd5w+4Jq8n0gk0cQgR5rh1FHw=="],
 

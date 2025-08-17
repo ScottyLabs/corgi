@@ -46,7 +46,6 @@
         "@commitlint/config-conventional": "^19.8.1",
         "@microsoft/api-extractor": "^7.52.8",
         "@storybook/addon-docs": "^9.0.15",
-        "@storybook/addon-onboarding": "^9.0.15",
         "@storybook/react-vite": "^9.0.15",
         "@vitejs/plugin-react-oxc": "^0.2.3",
         "@types/bun": "^1.2.18",
