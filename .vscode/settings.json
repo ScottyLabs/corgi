@@ -10,6 +10,9 @@
         "source.fixAll.biome": "always",
         "source.organizeImports.biome": "explicit"
     },
+    "tailwindCSS.experimental.classRegex": [
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+    ],
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },

@@ -1,29 +1,52 @@
 import { cva, type VariantProps } from "cva";
+import { cn } from "../../utils";
 
-const button = cva({
+const buttonStyles = cva({
+    base: "flex items-center justify-center rounded-4xl cursor-pointer text-white",
     variants: {
-        disabled: {},
-        size: {},
-        mode: {},
-        category: {},
+        disabled: {
+            true: "cursor-not-allowed",
+        },
+        size: {
+            sm: "text-sm py-1.5 px-3",
+            md: "text-base py-2 px-4",
+            lg: "text-lg py-2.5 px-5",
+        },
+        theme: {
+            neutral:
+                "bg-bg-neutral hover:bg-bg-neutral-hover active:bg-bg-neutral-active",
+            brand: "bg-bg-brand hover:bg-bg-brand-hover active:bg-bg-brand-active",
+        },
     },
+    compoundVariants: [
+        {
+            theme: "neutral",
+            disabled: true,
+            className: "bg-bg-neutral-disabled text-fg-neutral-disabled",
+        },
+        {
+            theme: "brand",
+            disabled: true,
+            className: "bg-bg-brand-disabled text-fg-brand-disabled",
+        },
+    ],
 });
 
-export interface ButtonProps
-    extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "disabled">,
-        VariantProps<typeof button> {}
+type ButtonProps = Omit<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    "disabled"
+> &
+    VariantProps<typeof buttonStyles>;
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button = ({
     className,
-    size,
-    mode,
-    category,
-    disabled,
+    size = "md",
+    theme = "neutral",
+    disabled = false,
     ...props
-}) => (
+}: ButtonProps) => (
     <button
-        className={button({ className, disabled, size, mode, category })}
-        disabled={disabled}
+        className={cn(buttonStyles({ disabled, size, theme, className }))}
         {...props}
     />
 );
