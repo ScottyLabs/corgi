@@ -29,7 +29,6 @@ export const Primary: Story = {
         theme: "neutral",
         size: "md",
         children: "Button",
-        className: "",
         disabled: false,
     },
 };
