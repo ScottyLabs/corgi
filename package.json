@@ -17,9 +17,7 @@
         "access": "public"
     },
     "scripts": {
-        "dev": "vite",
         "build": "tsc -b && vite build",
-        "preview": "vite preview",
         "storybook": "storybook dev -p 26744",
         "build-storybook": "storybook build",
         "check:ci": "biome check --no-errors-on-unmatched --files-ignore-unknown=true",
