@@ -3,15 +3,19 @@
     "description": "ScottyLabs component library",
     "license": "(MIT OR Apache-2.0)",
     "private": false,
-    "version": "0.2.0",
+    "version": "0.2.3",
     "type": "module",
     "main": "dist/main.js",
     "types": "dist/main.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/main.js",
+            "types": "./dist/main.d.ts"
+        },
+        "./css": "./dist/corgi.css"
+    },
     "files": [
         "dist"
-    ],
-    "sideEffects": [
-        "**/*.css"
     ],
     "publishConfig": {
         "access": "public"
