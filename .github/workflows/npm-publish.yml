@@ -1,4 +1,5 @@
 # https://docs.github.com/en/actions/tutorials/publish-packages/publish-nodejs-packages
+# https://bun.sh/docs/cli/publish
 name: Publish Package to npmjs
 on:
   release:
@@ -11,12 +12,11 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-bun@v2
         with:
-          node-version: '20.x'
+          bun-version: latest
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm publish --provenance --access public
+      - run: bun install
+      - run: bun publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
