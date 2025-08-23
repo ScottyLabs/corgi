@@ -13,6 +13,14 @@ export const Banner = ({
             className,
         )}
     >
-        Interested in Tech or Design? Like {projectName}? Join ScottyLabs!
+        Interested in Tech or Design? Like {projectName}?{" "}
+        <a
+            target="_blank"
+            href="https://tartanconnect.cmu.edu/scottylabs/club_signup"
+            className="text-blue-700 underline"
+            rel="noopener"
+        >
+            Join ScottyLabs!
+        </a>
     </div>
 );
