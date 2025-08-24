@@ -28,7 +28,7 @@
         "check": "bun run check:ci -- --write --unsafe",
         "preinstall": "npx only-allow bun",
         "prepublishOnly": "bun run build",
-        "prepare": "husky"
+        "prepare": "bunx husky"
     },
     "commitlint": {
         "extends": [
