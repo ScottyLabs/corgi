@@ -8,17 +8,19 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-export const CMUEats: Story = {
+export const cmueats: Story = {
     args: {
         projectName: "CMU Eats",
     },
 };
-export const CMUCourses: Story = {
+
+export const cmucourses: Story = {
     args: {
         projectName: "CMU Courses",
     },
 };
-export const CMUMaps: Story = {
+
+export const cmumaps: Story = {
     args: {
         projectName: "CMU Maps",
     },

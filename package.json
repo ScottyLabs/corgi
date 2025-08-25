@@ -3,7 +3,7 @@
     "description": "ScottyLabs component library",
     "license": "(MIT OR Apache-2.0)",
     "private": false,
-    "version": "0.2.11",
+    "version": "0.2.12",
     "type": "module",
     "main": "dist/main.js",
     "types": "dist/main.d.ts",
@@ -67,6 +67,7 @@
         "@base-ui-components/react": "^1.0.0-beta.1",
         "@tailwindcss/vite": "^4.1.12",
         "cva": "^1.0.0-beta.4",
+        "motion": "^12.23.12",
         "tailwind-merge": "^3.3.1",
         "tailwindcss": "^4.1.12"
     }
