@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Button } from "../../lib/components/Button";
+import { Home01 } from "../../lib/main";
 
 const meta = {
     component: Button,
@@ -18,6 +19,10 @@ const meta = {
             table: { type: { summary: "boolean" } },
             control: "boolean",
         },
+        icon: {
+            table: { type: { summary: "React.ReactNode" } },
+            control: "object",
+        },
     },
     tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
@@ -30,5 +35,14 @@ export const Primary: Story = {
         size: "md",
         children: "Button",
         disabled: false,
+    },
+};
+
+export const IconButton: Story = {
+    args: {
+        theme: "neutral",
+        size: "md",
+        children: "Button",
+        icon: <Home01 className="size-5 text-white" />,
     },
 };

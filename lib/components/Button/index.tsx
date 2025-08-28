@@ -35,18 +35,23 @@ const buttonStyles = cva({
 type ButtonProps = Omit<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     "disabled"
-> &
-    VariantProps<typeof buttonStyles>;
+> & {
+    icon?: React.ReactNode;
+} & VariantProps<typeof buttonStyles>;
 
 export const Button = ({
     className,
     size = "md",
     theme = "neutral",
     disabled = false,
+    icon,
     ...props
 }: ButtonProps) => (
     <button
         className={cn(buttonStyles({ disabled, size, theme, className }))}
         {...props}
-    />
+    >
+        {icon && <span className="mr-2">{icon}</span>}
+        {props.children}
+    </button>
 );

@@ -6,6 +6,7 @@
       "dependencies": {
         "@base-ui-components/react": "^1.0.0-beta.1",
         "@tailwindcss/vite": "^4.1.12",
+        "@untitledui/icons": "^0.0.19",
         "cva": "^1.0.0-beta.4",
         "motion": "^12.23.12",
         "tailwind-merge": "^3.3.1",
@@ -394,6 +395,8 @@
     "@types/react-dom": ["@types/react-dom@19.1.6", "", { "peerDependencies": { "@types/react": "^19.0.0" } }, "sha512-4hOiT/dwO8Ko0gV1m/TJZYk3y0KBnY9vzDh7W+DH17b2HFSOGgdj33dhihPeuy3l0q23+4e+hoXHV6hCC4dCXw=="],
 
     "@types/resolve": ["@types/resolve@1.20.6", "", {}, "sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ=="],
+
+    "@untitledui/icons": ["@untitledui/icons@0.0.19", "", { "peerDependencies": { "react": ">= 16" } }, "sha512-cZA7BBE5+piNpzO9CiXypbmGYSDqnT3WwHn6/TU7cUuYl7oUlwIn0AwW/kYDDkmJMPu/wRlnJDR1/OiXd4nqew=="],
 
     "@vitejs/plugin-react-oxc": ["@vitejs/plugin-react-oxc@0.2.3", "", { "dependencies": { "@rolldown/pluginutils": "1.0.0-beta.11" }, "peerDependencies": { "vite": "^6.3.0 || ^7.0.0-beta.0" } }, "sha512-ONriHoEGQv+ITmeJQsHIpx7u1ms8Z68oIo3AdKCoaBTvZtF+AfDVviQ3tKgCTnIbz9NW8V2Rd/Q+5zjzpsht1g=="],
 
