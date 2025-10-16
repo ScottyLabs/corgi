@@ -2,17 +2,18 @@
 
 ## Description
 
-This is the repository for ScottyLabs' React component library. The live documentation and component library can be found at: https://corgi.scottylabs.org.
+This is the repository for ScottyLabs' React component library. The live documentation and component library can be found at: <https://corgi.scottylabs.org>.
 
 ## Development
 
-Each component lives in its own directory under `lib/components`  
-(e.g. `lib/components/Button`). The directory name should match the component name.  
+Each component lives in its own directory under `lib/components`
+(e.g. `lib/components/Button`). The directory name should match the component name.
 
-- Each component must include an `index.tsx` file that exports the component as a **named export**.  
+- Each component must include an `index.tsx` file that exports the component as a **named export**.
 - Each component should be re‑exported in `lib/main.ts`, which serves as the entrypoint for the library.
 
 ### Design
+
 Corgi components are designed to match the ScottyLabs design system, as documented in our [Figma UI Kit](https://www.figma.com/design/TlYR1IqgGhRDXHyKJ1LHQs/ScottyLabs-UI-Kit).
 
 ### Functionality
@@ -24,15 +25,15 @@ For example, a `Toggle` component should wrap and extend the [Base UI Toggle](ht
 
 Each component should be styled in one of the following ways:
 
-1. **CVA (Preferred)**  
+1. **CVA (Preferred)**
    Use [CVA](https://cva.style/docs) with [Tailwind](https://tailwindcss.com/).
 
-2. **CSS Modules**  
+2. **CSS Modules**
    If the component requires **complex CSS or animations**, include an `index.module.css` file in the same directory.
 
 ### Stories
 
-[Storybook](https://storybook.js.org/docs) is used to develop and showcase components in isolation.  
+[Storybook](https://storybook.js.org/docs) is used to develop and showcase components in isolation.
 
 - Create corresponding stories for each component in `src/stories` (e.g. `src/stories/Button.stories.ts`).
 
