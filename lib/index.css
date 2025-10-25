@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-    --color-bg-neutral: #1e1e1e;
-    --color-bg-neutral-hover: #383838;
-    --color-bg-neutral-active: #666666;
-    --color-bg-neutral-disabled: #f5f5f5;
-    --color-fg-neutral-disabled: #bababa;
+    /* Filled Colors */
+    --color-filled-bg-neutral: #1e1e1e;
+    --color-filled-bg-neutral-hover: #383838;
+    --color-filled-bg-neutral-active: #666666;
+    --color-filled-bg-neutral-disabled: #f5f5f5;
+    --color-filled-fg-neutral-disabled: #bababa;
 
     --color-bg-brand: #0e96d1;
     --color-bg-brand-hover: #0d89de;
@@ -14,4 +15,58 @@
     --color-fg-brand-disabled: #f6fdff;
 
     --color-fg-neutral-tertiary: #808080;
+    --color-filled-bg-brand: #0e96d1;
+    --color-filled-bg-brand-hover: #0d89de;
+    --color-filled-bg-brand-active: #0a6b94;
+    --color-filled-bg-brand-disabled: #f6fdff;
+    --color-filled-fg-brand-disabled: #90cfea;
+
+    /* Tonal Colors */
+    --color-tonal-bg-neutral: #f5f5f5;
+    --color-tonal-fg-neutral: #1e1e1e;
+    --color-tonal-bg-neutral-hover: #e6e6e6;
+    --color-tonal-bg-neutral-active: #d6d6d6;
+    --color-tonal-fg-neutral-disabled: #bababa;
+
+    --color-tonal-bg-brand: #e7f5fa;
+    --color-tonal-fg-brand: #0a6b94;
+    --color-tonal-bg-brand-hover: #f6fdff;
+    --color-tonal-bg-brand-active: #f5f5f5;
+    --color-tonal-bg-brand-disabled: #f6fdff;
+    --color-tonal-fg-brand-disabled: #90cfea;
+
+    --color-tonal-bg-brandneutral: #f0f4f8;
+    --color-tonal-fg-brandneutral: #4a5662;
+    --color-tonal-bg-brandneutral-hover: #d9e1e7;
+    --color-tonal-bg-brandneutral-active: #c7d2dc;
+    --color-tonal-bg-brandneutral-disabled: #f0f4f8;
+    --color-tonal-fg-brandneutral-disabled: #aebdcc;
+
+    /* Outline Colors */
+    --color-outline-stroke-neutral: #d6d6d6;
+    --color-outline-bg: #ffffff00;
+    --color-outline-fg-neutral: #1e1e1e;
+    --color-outline-bg-neutral-hover: #f5f5f5;
+    --color-outline-bg-neutral-active: #e6e6e6;
+    --color-outline-stroke-neutral-disabled: #e6e6e6;
+    --color-outline-fg-neutral-disabled: #bababa;
+
+    --color-outline-stroke-brandneutral: #9eb1c2;
+    --color-outline-fg-brandneutral: #4a5662;
+    --color-outline-bg-brandneutral-hover: #f0f4f8;
+    --color-outline-bg-brandneutral-active: #d9e1e7;
+    --color-outline-stroke-brandneutral-disabled: #d9e1e7;
+    --color-outline-fg-brandneutral-disabled: #aebdcc;
+
+    /* Subtle Colors */
+    --color-subtle-bg: #ffffff00;
+    --color-subtle-fg-neutral: #1e1e1e;
+    --color-subtle-bg-neutral-hover: #f5f5f5;
+    --color-subtle-bg-neutral-active: #e6e6e6;
+    --color-subtle-fg-neutral-disabled: #bababa;
+
+    --color-subtle-fg-brandneutral: #4a5662;
+    --color-subtle-bg-brandneutral-hover: #f0f4f8;
+    --color-subtle-bg-brandneutral-active: #d9e1e7;
+    --color-subtle-fg-brandneutral-disabled: #aebdcc;
 }

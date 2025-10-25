@@ -20,7 +20,7 @@ export const Banner = ({ projectName }: { projectName: string }) => {
             <div className="welcome-banner">
                 <div className="welcome-banner__spacer" />
                 <div className="welcome-banner__text welcome-banner-padding">
-                    <span className="welcome-banner__text--long ">
+                    <span className="welcome-banner__text--long">
                         <img src={scottyDog} alt="" />
                         <span>
                             Interested in Tech/Design or want to help build the
@@ -36,7 +36,7 @@ export const Banner = ({ projectName }: { projectName: string }) => {
                             !
                         </span>
                     </span>
-                    <span className="welcome-banner__text--short ">
+                    <span className="welcome-banner__text--short">
                         Interested in Tech/Design? Join{" "}
                         <a
                             href="https://tartanconnect.cmu.edu/scottylabs/club_signup"

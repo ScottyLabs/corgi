@@ -5,9 +5,14 @@ import { Home01 } from "../../lib/main";
 const meta = {
     component: Button,
     argTypes: {
-        theme: {
-            table: { type: { summary: "neutral | brand" } },
-            options: ["neutral", "brand"],
+        style: {
+            table: { type: { summary: "filled | tonal | outline | subtle" } },
+            options: ["filled", "tonal", "outline", "subtle"],
+            control: "select",
+        },
+        palette: {
+            table: { type: { summary: "neutral | brand | brandneutral" } },
+            options: ["neutral", "brand", "brandneutral"],
             control: "select",
         },
         size: {
@@ -31,7 +36,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {
-        theme: "neutral",
+        style: "filled",
+        palette: "neutral",
         size: "md",
         children: "Button",
         disabled: false,
@@ -40,7 +46,8 @@ export const Primary: Story = {
 
 export const IconButton: Story = {
     args: {
-        theme: "neutral",
+        style: "filled",
+        palette: "neutral",
         size: "md",
         children: "Button",
         icon: <Home01 className="size-5 text-white" />,
