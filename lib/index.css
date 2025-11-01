@@ -69,4 +69,7 @@
     --color-subtle-bg-brandneutral-hover: #f0f4f8;
     --color-subtle-bg-brandneutral-active: #d9e1e7;
     --color-subtle-fg-brandneutral-disabled: #aebdcc;
+
+    /* Switch Colors */
+    --switch-color-brandneutral: #7a8fa3;
 }
