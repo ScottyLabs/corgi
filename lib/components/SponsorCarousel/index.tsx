@@ -1,7 +1,18 @@
-import "./index.module.css";
+import clsx from "clsx";
+import { useState } from "react";
+import ScottyDog from "../../assets/sponsor_carousel/scottydog.svg?url";
+import DropdownArrow from "../assets/sponsor_carousel/dropdown_arrow.svg?url";
+import css from "./index.module.css";
 
-//specify darkmode true or false
-export function SponsorCarousel({ darkMode }: { darkMode: boolean }) {
+export const SponsorCarousel = ({
+    darkMode,
+    openByDefault,
+}: {
+    darkMode: boolean;
+    openByDefault: boolean;
+}) => {
+    const [carouselVisible, setCarouselVisible] = useState(openByDefault);
+
     const logos = Object.values(
         import.meta.glob("../assets/logos/*", {
             eager: true,
@@ -15,37 +26,55 @@ export function SponsorCarousel({ darkMode }: { darkMode: boolean }) {
         };
     });
 
-    // double it because it loops seamlessly
-    const doubleLogos = [...logos, ...logos];
+    // double it to make it loop seamlessly
+    const doubleLogos = [
+        ...logos,
+        ...logos.map((l) => ({ ...l, alt: `${l.alt}2` })),
+    ];
 
     return (
-        <div className={`${darkMode ? "sponsors--dark" : "sponsors--light"}`}>
-            <div className="footer__sponsors-tab">
-                <span className="footer__sponsors-desc">
-                    <p className="footer__sponsors-text">
-                        ScottyLabs is sponsored by
-                    </p>
-                </span>
-            </div>
-            <div className="footer__sponsors">
-                <div className="footer__sponsors-carousel">
-                    <div className="carousel">
-                        <ul className="carousel__track">
-                            {doubleLogos.map((logo) => (
-                                <li className="carousel__item" key={logo.src}>
-                                    <img
-                                        src={logo.src}
-                                        alt=""
-                                        className="carousel__image"
-                                    />
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+        <div
+            className={clsx(
+                css.sponsors,
+                darkMode ? css["sponsors--dark"] : css["sponsors--light"],
+            )}
+        >
+            <div
+                className={css[`carousel-container`]}
+                aria-hidden={!carouselVisible}
+            >
+                <button
+                    onClick={() => setCarouselVisible((v) => !v)}
+                    className={css["sponsors-button"]}
+                    aria-expanded={carouselVisible}
+                    type="button"
+                >
+                    <img
+                        src={ScottyDog}
+                        alt="scotty dog"
+                        className={css[`sponsors-button__dog`]}
+                    />{" "}
+                    ScottyLabs is sponsored by{" "}
+                    <img
+                        src={DropdownArrow}
+                        alt="dropdown arrow"
+                        className={css[`sponsors-button__arrow`]}
+                    />
+                </button>
+                <div className={css.carousel}>
+                    <ul className={css.carousel__track}>
+                        {doubleLogos.map((logo) => (
+                            <li className={css.carousel__item} key={logo.alt}>
+                                <img
+                                    src={logo.src}
+                                    alt={logo.alt}
+                                    className={css.carousel__image}
+                                />
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>
     );
-}
-
-export default SponsorCarousel;
+};
