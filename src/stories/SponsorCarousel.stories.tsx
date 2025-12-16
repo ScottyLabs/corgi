@@ -8,16 +8,28 @@ const meta = {
             table: { type: { summary: "boolean" } },
             control: "boolean",
         },
+        openByDefault: {
+            table: { type: { summary: "boolean" } },
+            control: "boolean",
+        },
     },
     tags: ["autodocs"],
 } satisfies Meta<typeof SponsorCarousel>;
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-export const darkMode: Story = {
-    args: { darkMode: true },
+export const darkModeClosed: Story = {
+    args: { darkMode: true, openByDefault: false },
 };
 
-export const lightMode: Story = {
-    args: { darkMode: false },
+export const lightModeClosed: Story = {
+    args: { darkMode: false, openByDefault: false },
+};
+
+export const darkModeOpen: Story = {
+    args: { darkMode: true, openByDefault: true },
+};
+
+export const lightModeOpen: Story = {
+    args: { darkMode: false, openByDefault: true },
 };
