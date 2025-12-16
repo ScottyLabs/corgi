@@ -6,8 +6,8 @@
 }
 .sponsors--dark {
     --sponsors-text-color: rgba(255, 255, 255, 0.7);
-    --sponsors-background-color: var(--black-1000);
-    --sponsors-border-color: var(--black-800);
+    --sponsors-background-color: hsla(206, 9%, 15%, 1);
+    --sponsors-border-color: hsla(207, 6%, 35%, 1);
 
     .carousel__image {
         filter: brightness(0) invert(1);
