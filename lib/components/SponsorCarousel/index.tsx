@@ -7,11 +7,25 @@ import css from "./index.module.css";
 export const SponsorCarousel = ({
     darkMode,
     openByDefault,
+    textColor,
+    backgroundColor,
+    borderColor,
 }: {
     darkMode: boolean;
     openByDefault: boolean;
+    textColor?: string;
+    backgroundColor?: string;
+    borderColor?: string;
 }) => {
     const [carouselVisible, setCarouselVisible] = useState(openByDefault);
+
+    const customStyles = {
+        ...(textColor && { "--sponsors-text-color": textColor }),
+        ...(backgroundColor && {
+            "--sponsors-background-color": backgroundColor,
+        }),
+        ...(borderColor && { "--sponsors-border-color": borderColor }),
+    } as React.CSSProperties;
 
     const logos = Object.values(
         import.meta.glob("../assets/logos/*", {
@@ -38,6 +52,7 @@ export const SponsorCarousel = ({
                 css.sponsors,
                 darkMode ? css["sponsors--dark"] : css["sponsors--light"],
             )}
+            style={customStyles}
         >
             <div
                 className={css[`carousel-container`]}
