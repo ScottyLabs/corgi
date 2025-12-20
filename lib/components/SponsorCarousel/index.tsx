@@ -4,6 +4,10 @@ import ScottyDog from "../../assets/sponsor_carousel/scottydog.svg?react";
 import DropdownArrow from "../../assets/sponsor_carousel/dropdown_arrow.svg?react";
 import css from "./index.module.css";
 
+/**
+ * Recommended use: wrap this in a position:relative div with height 0, and 
+ * place that div wherever you want the carousel to be.
+ */
 export const SponsorCarousel = ({
     darkMode,
     openByDefault,
@@ -33,17 +37,17 @@ export const SponsorCarousel = ({
             query: "url",
         }) as Record<string, { default: string }>,
     ).map(({ default: logoUrl }) => {
-        const filename = (logoUrl.split("/").pop() || "") + Math.random();
+        const filename = (logoUrl.split("/").pop() || "");
         return {
             src: logoUrl,
             alt: filename,
         };
     });
-    console.log(logos );
+
     // double it to make it loop seamlessly
     const doubleLogos = [
         ...logos,
-        ...logos.map((l) => ({ ...l, alt: `${l.alt}2` })),
+        ...logos,
     ];
 
     return (
@@ -65,19 +69,17 @@ export const SponsorCarousel = ({
                     type="button"
                 >
                     <ScottyDog
-                        alt="scotty dog"
                         className={css[`sponsors-button__dog`]}
                     />{" "}
                     ScottyLabs is sponsored by{" "}
                     <DropdownArrow
-                        alt="dropdown arrow"
                         className={css[`sponsors-button__arrow`]}
                     />
                 </button>
                 <div className={css.carousel}>
                     <ul className={css.carousel__track}>
-                        {doubleLogos.map((logo) => (
-                            <li className={css.carousel__item} key={logo.alt}>
+                        {doubleLogos.map((logo,i) => (
+                            <li className={css.carousel__item} key={i}>
                                 <img
                                     src={logo.src}
                                     alt={logo.alt}
