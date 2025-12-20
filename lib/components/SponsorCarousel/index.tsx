@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
-import ScottyDog from "../../assets/sponsor_carousel/scottydog.svg?url";
-import DropdownArrow from "../assets/sponsor_carousel/dropdown_arrow.svg?url";
+import ScottyDog from "../../assets/sponsor_carousel/scottydog.svg?react";
+import DropdownArrow from "../../assets/sponsor_carousel/dropdown_arrow.svg?react";
 import css from "./index.module.css";
 
 export const SponsorCarousel = ({
@@ -28,18 +28,18 @@ export const SponsorCarousel = ({
     } as React.CSSProperties;
 
     const logos = Object.values(
-        import.meta.glob("../assets/logos/*", {
+        import.meta.glob("/lib/assets/sponsor_carousel/logos/*", {
             eager: true,
             query: "url",
         }) as Record<string, { default: string }>,
     ).map(({ default: logoUrl }) => {
-        const filename = logoUrl.split("/").pop() || "";
+        const filename = (logoUrl.split("/").pop() || "") + Math.random();
         return {
             src: logoUrl,
             alt: filename,
         };
     });
-
+    console.log(logos );
     // double it to make it loop seamlessly
     const doubleLogos = [
         ...logos,
@@ -64,14 +64,12 @@ export const SponsorCarousel = ({
                     aria-expanded={carouselVisible}
                     type="button"
                 >
-                    <img
-                        src={ScottyDog}
+                    <ScottyDog
                         alt="scotty dog"
                         className={css[`sponsors-button__dog`]}
                     />{" "}
                     ScottyLabs is sponsored by{" "}
-                    <img
-                        src={DropdownArrow}
+                    <DropdownArrow
                         alt="dropdown arrow"
                         className={css[`sponsors-button__arrow`]}
                     />
