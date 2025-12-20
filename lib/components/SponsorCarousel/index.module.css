@@ -3,6 +3,9 @@
     --sponsors-border-color: red;
     --sponsors-background-color: red;
     --sponsors-text-color: red;
+    *:where(:not(path)) {
+        all: revert;
+    }
 }
 .sponsors--dark {
     --sponsors-text-color: rgba(255, 255, 255, 0.7);
