@@ -95,6 +95,7 @@
     & > .welcome-banner__close {
         flex-grow: 1;
         flex-shrink: 0;
+        flex-basis: 0;
         align-self: center;
         & > button {
             display: block;
