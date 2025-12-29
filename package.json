@@ -29,7 +29,6 @@
         "@types/react-dom": "^19.1.6",
         "@vitejs/plugin-react-oxc": "^0.2.3",
         "husky": "^9.1.7",
-        "lint-staged": "^16.1.2",
         "madr": "^4.0.0",
         "storybook": "^9.0.15",
         "syncpack": "^13.0.4",
@@ -48,11 +47,6 @@
         "dist"
     ],
     "license": "(MIT OR Apache-2.0)",
-    "lint-staged": {
-        "*": [
-            "echo bun run check skipped"
-        ]
-    },
     "main": "dist/main.js",
     "peerDependencies": {
         "react": "^19.1.0",
