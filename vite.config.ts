@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react-oxc";
 import { glob } from "glob";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import svgrPlugin from 'vite-plugin-svgr';
+import svgrPlugin from "vite-plugin-svgr";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 

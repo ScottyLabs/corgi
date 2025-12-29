@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import { useState } from "react";
-import ScottyDog from "../../assets/sponsor_carousel/scottydog.svg?react";
 import DropdownArrow from "../../assets/sponsor_carousel/dropdown_arrow.svg?react";
+import ScottyDog from "../../assets/sponsor_carousel/scottydog.svg?react";
 import css from "./index.module.css";
 
 /**
- * Recommended use: wrap this in a position:relative div with height 0, and 
+ * Recommended use: wrap this in a position:relative div with height 0, and
  * place that div wherever you want the carousel to be.
  */
 export const SponsorCarousel = ({
@@ -37,7 +37,7 @@ export const SponsorCarousel = ({
             query: "url",
         }) as Record<string, { default: string }>,
     ).map(({ default: logoUrl }) => {
-        const filename = (logoUrl.split("/").pop() || "");
+        const filename = logoUrl.split("/").pop() || "";
         return {
             src: logoUrl,
             alt: filename,
@@ -45,10 +45,7 @@ export const SponsorCarousel = ({
     });
 
     // double it to make it loop seamlessly
-    const doubleLogos = [
-        ...logos,
-        ...logos,
-    ];
+    const doubleLogos = [...logos, ...logos];
 
     return (
         <div
@@ -68,18 +65,17 @@ export const SponsorCarousel = ({
                     aria-expanded={carouselVisible}
                     type="button"
                 >
-                    <ScottyDog
-                        className={css[`sponsors-button__dog`]}
-                    />{" "}
+                    <ScottyDog className={css[`sponsors-button__dog`]} />{" "}
                     ScottyLabs is sponsored by{" "}
-                    <DropdownArrow
-                        className={css[`sponsors-button__arrow`]}
-                    />
+                    <DropdownArrow className={css[`sponsors-button__arrow`]} />
                 </button>
                 <div className={css.carousel}>
                     <ul className={css.carousel__track}>
-                        {doubleLogos.map((logo,i) => (
-                            <li className={css.carousel__item} key={i}>
+                        {doubleLogos.map((logo) => (
+                            <li
+                                className={css.carousel__item}
+                                key={`${logo.alt}`}
+                            >
                                 <img
                                     src={logo.src}
                                     alt={logo.alt}
