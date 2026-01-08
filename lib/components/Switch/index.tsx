@@ -6,9 +6,10 @@ import styles from "./index.module.css";
 const switchRootStyles = cva({
     base: styles.Switch,
     variants: {
-        theme: {
+        palette: {
             neutral: styles.Neutral,
             brand: styles.Brand,
+            brandNeutral: styles.BrandNeutral,
         },
     },
 });
@@ -16,9 +17,10 @@ const switchRootStyles = cva({
 const switchThumbStyles = cva({
     base: styles.Thumb,
     variants: {
-        theme: {
+        palette: {
             neutral: styles.NeutralThumb,
             brand: styles.BrandThumb,
+            brandNeutral: styles.BrandNeutralThumb,
         },
     },
 });
@@ -26,8 +28,8 @@ const switchThumbStyles = cva({
 type SwitchProps = React.ComponentProps<typeof BaseUISwitch.Root> &
     VariantProps<typeof switchRootStyles>;
 
-export const Switch = ({ theme = "neutral", ...props }: SwitchProps) => (
-    <BaseUISwitch.Root className={cn(switchRootStyles({ theme }))} {...props}>
-        <BaseUISwitch.Thumb className={switchThumbStyles({ theme })} />
+export const Switch = ({ palette = "neutral", ...props }: SwitchProps) => (
+    <BaseUISwitch.Root className={cn(switchRootStyles({ palette }))} {...props}>
+        <BaseUISwitch.Thumb className={switchThumbStyles({ palette })} />
     </BaseUISwitch.Root>
 );

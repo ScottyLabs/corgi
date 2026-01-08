@@ -4,7 +4,7 @@ import { Switch } from "../../lib/components/Switch";
 const meta = {
     component: Switch,
     argTypes: {
-        theme: {
+        palette: {
             table: { type: { summary: "neutral | brand | brandNeutral" } },
             options: ["neutral", "brand", "brandNeutral"],
             control: "select",
@@ -16,11 +16,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 export const Neutral: Story = {
-    args: { theme: "neutral" },
+    args: { palette: "neutral" },
 };
 
 export const Brand: Story = {
-    args: { theme: "brand" },
+    args: { palette: "brand" },
 };
 
 export const DefaultChecked: Story = {

@@ -9,14 +9,9 @@
     width: 2.5rem;
     height: 1.5rem;
     border-radius: 1.5rem;
-    outline: 1px solid;
+    outline: 1px solid var(--color-fg-neutral-tertiary);
     outline-offset: -1px;
     background-color: transparent;
-    background-image: linear-gradient(
-        to right,
-        var(--color-gray-700) 35%,
-        var(--color-gray-200) 65%
-    );
     background-size: 6.5rem 100%;
     background-position-x: 100%;
     background-repeat: no-repeat;
@@ -30,26 +25,15 @@
 
     &[data-checked] {
         background-position-x: 0%;
-    }
-
-    &[data-checked]:active {
-        background-color: var(--color-gray-500);
+        background-color: var(--color-filled-bg-neutral);
+        outline: 1px solid var(--color-filled-bg-neutral);
     }
 
     @media (prefers-color-scheme: light) {
-        box-shadow: var(--color-gray-200) 0 1.5px 2px inset;
         outline-color: var(--color-gray-200);
     }
 
     @media (prefers-color-scheme: dark) {
-        box-shadow: rgb(0 0 0 / 75%) 0 1.5px 2px inset;
-        outline-color: rgb(255 255 255 / 15%);
-        background-image: linear-gradient(
-            to right,
-            var(--color-gray-500) 35%,
-            var(--color-gray-200) 65%
-        );
-
         &[data-checked] {
             box-shadow: none;
         }
@@ -69,25 +53,28 @@
 
 .Neutral {
     background-color: transparent;
-    background-image: linear-gradient(
-        to right,
-        var(--color-bg-neutral) 35%,
-        var(--color-white) 65%
-    );
+}
+
+.BrandNeutral {
+    background-color: transparent;
+    outline: 1px solid var(--switch-color-brandneutral);
+
+    &[data-checked] {
+        background-color: var(--color-tonal-fg-brandneutral);
+        outline: 1px solid var(--color-tonal-fg-brandneutral);
+    }
 }
 
 .Brand {
-    background-color: transparent;
-    background-image: linear-gradient(
-        to right,
-        var(--color-bg-brand) 35%,
-        var(--color-white) 65%
-    );
+    &[data-checked] {
+        background-color: var(--color-bg-brand);
+        outline: 1px solid var(--color-bg-brand);
+    }
 }
 
 .Thumb {
     aspect-ratio: 1 / 1;
-    height: 100%;
+    margin: 3px;
     border-radius: 100%;
     background-color: white;
     transition: translate 150ms ease;
@@ -95,25 +82,17 @@
     &[data-checked] {
         translate: 1rem 0;
     }
-
-    @media (prefers-color-scheme: light) {
-        box-shadow:
-            0 0 1px 1px var(--color-gray-100),
-            0 1px 1px var(--color-gray-100),
-            1px 2px 4px -1px var(--color-gray-100);
-    }
-
-    @media (prefers-color-scheme: dark) {
-        box-shadow:
-            0 0 1px 1px rgb(0 0 0 / 25%),
-            0 1px 1px rgb(0 0 0 / 25%),
-            1px 2px 4px -1px rgb(0 0 0 / 25%);
-    }
 }
 
 .NeutralThumb {
     &:not([data-checked]) {
         background-color: var(--color-fg-neutral-tertiary);
+    }
+}
+
+.BrandNeutralThumb {
+    &:not([data-checked]) {
+        background-color: var(--switch-color-brandneutral);
     }
 }
 
