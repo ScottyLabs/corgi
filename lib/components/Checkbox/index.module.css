@@ -1,0 +1,87 @@
+.Checkbox {
+    box-sizing: border-box;
+    display: flex;
+    width: 1.25rem;
+    height: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    &[data-unchecked] {
+        border: 1px solid var(--color-filled-bg-neutral);
+        background-color: transparent;
+
+        &[data-disabled] {
+            border: 1px solid var(--color-filled-fg-neutral-disabled);
+        }
+    }
+
+    &[data-checked] {
+        background-color: var(--color-gray-900);
+
+        &[data-disabled] {
+            background-color: var(--color-filled-fg-neutral-disabled);
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-blue);
+        outline-offset: 2px;
+    }
+}
+
+.Neutral {
+    &[data-checked] {
+        background-color: var(--color-filled-bg-neutral);
+    }
+}
+
+.Brand {
+    &[data-checked] {
+        background-color: var(--color-bg-brand);
+    }
+}
+
+.Indicator {
+    display: flex;
+    color: var(--color-gray-50);
+
+    &[data-unchecked] {
+        display: none;
+    }
+}
+
+.Icon {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.Circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.Circle:hover {
+    background-color: var(--color-filled-bg-neutral-disabled);
+
+    &[data-disabled] {
+        background-color: transparent;
+    }
+}
+
+.Circle:active {
+    background-color: var(--color-tonal-bg-neutral-hover);
+
+    &[data-disabled] {
+        background-color: transparent;
+    }
+}
